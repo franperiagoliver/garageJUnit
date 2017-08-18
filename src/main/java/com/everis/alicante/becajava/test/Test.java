@@ -24,7 +24,7 @@ import com.everis.alicante.becajava.interfaces.VehicleDAO;
 import com.everis.alicante.becajava.services.BookingService;
 import com.everis.alicante.becajava.services.implementaciones.BookingServiceImpl;
 
-
+// Comentario para Jenkins
 
 public class Test {
 	
