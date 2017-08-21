@@ -135,4 +135,13 @@ public class Client implements Serializable {
 		return vehicle;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "El cliente con ID " + getIdclient() + " y nombre completo " + getName() + " " + getSurname() + " con NIF " + getNif() + " ,tiene el teléfono " + getTelephone()
+		+ " y con las siguientes reservas " + getBookings() + " . Vehiculos: " + getVehicles();
+	}
+	
+	
+
 }

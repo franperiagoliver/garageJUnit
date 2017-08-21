@@ -1,5 +1,6 @@
 package com.everis.alicante.becajava.services.implementaciones;
 
+import java.util.Date;
 import java.util.List;
 
 import com.everis.alicante.becajava.domain.Booking;
@@ -45,11 +46,12 @@ public class BookingServiceImpl implements BookingService {
 		super();
 		this.bookingDao = bookingDao;
 	}
-	
-	
+
+	@Override
+	public List<Booking> findBookingByDate(Date fechaInicio, Date fechaFin) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
-
-	
-
 }

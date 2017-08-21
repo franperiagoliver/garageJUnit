@@ -6,35 +6,34 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-
 /**
  * The persistent class for the vehicle database table.
  * 
  */
 @Entity
-@Table(name="vehicle")
-@NamedQuery(name="Vehicle.findAll", query="SELECT v FROM Vehicle v")
+@Table(name = "vehicle")
+@NamedQuery(name = "Vehicle.findAll", query = "SELECT v FROM Vehicle v")
 public class Vehicle implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(unique=true, nullable=false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(unique = true, nullable = false)
 	private int idvehicle;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String vehiclemodel;
 
-	@Column(nullable=false, length=255)
+	@Column(nullable = false, length = 255)
 	private String vehicleplate;
 
-	//bi-directional many-to-one association to Booking
-	@OneToMany(mappedBy="vehicle", fetch=FetchType.EAGER)
+	// bi-directional many-to-one association to Booking
+	@OneToMany(mappedBy = "vehicle", fetch = FetchType.EAGER)
 	private Set<Booking> bookings;
 
-	//bi-directional many-to-one association to Client
+	// bi-directional many-to-one association to Client
 	@ManyToOne
-	@JoinColumn(name="idCLIENT")
+	@JoinColumn(name = "idCLIENT")
 	private Client client;
 
 	public Vehicle() {

@@ -81,9 +81,9 @@ public class ControladorGarajeImpl implements ControladorGaraje{
 	}
 
 	@Override
-	public void listarClientes() {
+	public List<Client> listarClientes() {
 		
-		System.out.println(this.serviceClient.listClients());		
+		return this.serviceClient.listClients();		
 		
 	}
 
@@ -95,16 +95,15 @@ public class ControladorGarajeImpl implements ControladorGaraje{
 	}
 
 	@Override
-	public void listarVehiculos(){
+	public List<Vehicle> listarVehiculos(){
 		
-		System.out.println(this.vehicleService.list());
+		return this.vehicleService.list();
 		
 	}
 
 	@Override
-	public void listarReservasByFecha(Date fechaInicio, Date fechaFin) {
-		// TODO Auto-generated method stub
-		
+	public List<Booking> listarReservasByFecha() {
+		return this.bookingService.list();
 	}
 
 	public ControladorGarajeImpl() {
