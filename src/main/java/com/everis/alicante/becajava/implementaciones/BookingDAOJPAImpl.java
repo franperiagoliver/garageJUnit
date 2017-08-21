@@ -1,5 +1,6 @@
 package com.everis.alicante.becajava.implementaciones;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -53,6 +54,16 @@ public class BookingDAOJPAImpl implements BookingDAO{
 		
 		return query.getResultList();
 		
+	}
+
+	@Override
+	public List<Booking> findByDate(Date fechaInicio, Date fechaFin) {
+		Query query = em.createNativeQuery("select idBooking, bookingDate from booking "+
+										 "	where bookingDate between ? and ?");
+		query.setParameter(1, fechaInicio);
+		query.setParameter(2, fechaFin);
+		
+		return query.getResultList();
 	}
 	
 

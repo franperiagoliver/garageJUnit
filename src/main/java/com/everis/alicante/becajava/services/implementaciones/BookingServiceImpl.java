@@ -49,8 +49,7 @@ public class BookingServiceImpl implements BookingService {
 
 	@Override
 	public List<Booking> findBookingByDate(Date fechaInicio, Date fechaFin) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.bookingDao.findByDate(fechaInicio, fechaFin);
 	}
 
 	
