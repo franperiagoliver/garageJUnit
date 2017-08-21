@@ -2,5 +2,5 @@ projectKey=garageJUnit
 serverUrl=http://localhost:9000
 serverVersion=6.4.0.25310
 dashboardUrl=http://localhost:9000/dashboard/index/garageJUnit
-ceTaskId=AV32JMt163r_ZpnP_Pio
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AV32JMt163r_ZpnP_Pio
+ceTaskId=AV32J6fR63r_ZpnP_Pip
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV32J6fR63r_ZpnP_Pip
