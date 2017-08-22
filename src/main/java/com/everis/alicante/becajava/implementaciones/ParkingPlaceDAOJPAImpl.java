@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import com.everis.alicante.becajava.domain.Booking;
 import com.everis.alicante.becajava.domain.Parkingplace;
 import com.everis.alicante.becajava.interfaces.ParkingPlaceDAO;
 
@@ -12,7 +13,7 @@ import com.everis.alicante.becajava.interfaces.ParkingPlaceDAO;
 public class ParkingPlaceDAOJPAImpl implements ParkingPlaceDAO{
 
 	EntityManager em;
-	
+	Parkingplace parkingPlace = new Parkingplace();
 	
 	@Override
 	public void create(Parkingplace parkingplace) {
@@ -77,5 +78,10 @@ public class ParkingPlaceDAOJPAImpl implements ParkingPlaceDAO{
 		return query.getResultList();
 	}
 	
-
+	@Override
+	public List<Parkingplace> findOcupatedParkingPlaces() {
+		Query query = em.createNamedQuery("Parkingplace.findOcupatedPlaces");
+		
+		return query.getResultList();
+	}
 }

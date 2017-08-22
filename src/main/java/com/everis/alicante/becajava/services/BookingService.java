@@ -7,7 +7,8 @@ import com.everis.alicante.becajava.domain.Booking;
 
 public interface BookingService {
 	
-		
+	Booking findBookingById(int id);
+	
 	List<Booking> list();
 	
 	Booking findBooking(String field);
@@ -16,4 +17,6 @@ public interface BookingService {
 
 	void create(Booking booking);
 
+	void updateBooking(Booking booking);
+	
 }

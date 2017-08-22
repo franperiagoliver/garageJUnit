@@ -15,7 +15,8 @@ import java.util.Set;
 @Table(name="parkingplace")
 @NamedQueries({
 	 @NamedQuery(name="Parkingplace.findAll", query="SELECT p FROM Parkingplace p"),
-	 @NamedQuery(name="Parkingplace.findFreePlaces", query="SELECT p FROM Parkingplace p where p.parkingstate=0")
+	 @NamedQuery(name="Parkingplace.findFreePlaces", query="SELECT p FROM Parkingplace p where p.parkingstate=0"),
+	 @NamedQuery(name="Parkingplace.findOcupatedPlaces", query="SELECT p FROM Parkingplace p where p.parkingstate=1")
 }) 
 public class Parkingplace implements Serializable {
 	private static final long serialVersionUID = 1L;

@@ -17,5 +17,7 @@ public interface ControladorGaraje {
 	List<Booking> listarReservasByFecha();
 	boolean reservarPlaza(Client client, Vehicle vehicle);
 	double findImporteCliente(Client client);
-
+	List<Parkingplace> listarPlazasOcupadas();
+	Booking listarReservasById(int id);
+	Boolean actualizarReserva(Booking booking);
 }

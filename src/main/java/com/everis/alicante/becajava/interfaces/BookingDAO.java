@@ -18,6 +18,6 @@ public interface BookingDAO {
 	List<Booking> findAll();
 
 	List<Booking> findByDate(Date fechaInicio, Date fechaFin);
-		
+	
 
 }

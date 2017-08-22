@@ -52,5 +52,15 @@ public class BookingServiceImpl implements BookingService {
 		return this.bookingDao.findByDate(fechaInicio, fechaFin);
 	}
 
+	@Override
+	public Booking findBookingById(int id) {
+		return this.bookingDao.readById(id);
+	}
+
+	@Override
+	public void updateBooking(Booking booking) {
+		this.bookingDao.update(booking);
+		
+	}
 	
 }

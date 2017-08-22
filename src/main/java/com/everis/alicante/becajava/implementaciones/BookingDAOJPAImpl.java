@@ -7,12 +7,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import com.everis.alicante.becajava.domain.Booking;
+import com.everis.alicante.becajava.domain.Parkingplace;
 import com.everis.alicante.becajava.interfaces.BookingDAO;
 
 
 public class BookingDAOJPAImpl implements BookingDAO{
 
 	EntityManager em;
+	Parkingplace parkingPlace = new Parkingplace();
 	
 	@Override
 	public void create(Booking Booking) {
@@ -65,6 +67,6 @@ public class BookingDAOJPAImpl implements BookingDAO{
 		
 		return query.getResultList();
 	}
-	
+
 
 }

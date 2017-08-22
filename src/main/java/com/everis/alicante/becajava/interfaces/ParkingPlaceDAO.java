@@ -2,6 +2,7 @@ package com.everis.alicante.becajava.interfaces;
 
 import java.util.List;
 
+import com.everis.alicante.becajava.domain.Booking;
 import com.everis.alicante.becajava.domain.Parkingplace;
 
 public interface ParkingPlaceDAO {
@@ -19,6 +20,7 @@ public interface ParkingPlaceDAO {
 	int findFreeParkingPlace();
 	
 	List<Parkingplace> findFreeParkingPlaces();
-		
+	
+	List<Parkingplace> findOcupatedParkingPlaces();
 
 }

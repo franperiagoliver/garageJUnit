@@ -132,6 +132,30 @@ public class ControladorGarajeImpl implements ControladorGaraje{
 
 
 
+	@Override
+	public List<Parkingplace> listarPlazasOcupadas() {
+		
+		return this.parkingService.listOcupatedPlaces();
+	}
+
+
+
+	@Override
+	public Booking listarReservasById(int id) {
+		return this.bookingService.findBookingById(id);
+	}
+
+
+
+	@Override
+	public Boolean actualizarReserva(Booking booking) {
+		this.bookingService.updateBooking(booking);
+		return true;
+		
+	}
+
+
+
 
 		
 
