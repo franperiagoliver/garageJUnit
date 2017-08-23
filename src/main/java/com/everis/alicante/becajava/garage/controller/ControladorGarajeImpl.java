@@ -102,8 +102,8 @@ public class ControladorGarajeImpl implements ControladorGaraje{
 	}
 
 	@Override
-	public List<Booking> listarReservasByFecha() {
-		return this.bookingService.list();
+	public List<Booking> listarReservasByFecha(Date fecInicio, Date fecFin) {
+		return this.bookingService.findBookingByDate(fecInicio, fecFin);
 	}
 
 	public ControladorGarajeImpl() {
@@ -152,6 +152,21 @@ public class ControladorGarajeImpl implements ControladorGaraje{
 		this.bookingService.updateBooking(booking);
 		return true;
 		
+	}
+
+
+
+	@Override
+	public Client listarClientesById(Integer id) {
+		return this.serviceClient.findClientById(id);
+	}
+
+
+
+	@Override
+	public Boolean actualizarCliente(Client client) {
+		this.serviceClient.updateCliente(client);
+		return true;
 	}
 
 

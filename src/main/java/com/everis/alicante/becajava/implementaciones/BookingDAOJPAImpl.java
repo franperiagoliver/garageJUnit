@@ -60,10 +60,10 @@ public class BookingDAOJPAImpl implements BookingDAO{
 
 	@Override
 	public List<Booking> findByDate(Date fechaInicio, Date fechaFin) {
-		Query query = em.createNativeQuery("select idBooking, bookingDate from booking "+
-										 "	where bookingDate between ? and ?");
-		query.setParameter(1, fechaInicio);
-		query.setParameter(2, fechaFin);
+		Query query = em.createNamedQuery("Booking.findByDate");
+		
+		query.setParameter("fechaInicio", fechaInicio);
+		query.setParameter("fechaFin", fechaFin);
 		
 		return query.getResultList();
 	}

@@ -14,10 +14,12 @@ public interface ControladorGaraje {
 	List<Client> listarClientes();
 	List<Booking> listarReservas();
 	List<Vehicle> listarVehiculos();
-	List<Booking> listarReservasByFecha();
+	List<Booking> listarReservasByFecha(Date fecInicio, Date fecFin);
 	boolean reservarPlaza(Client client, Vehicle vehicle);
 	double findImporteCliente(Client client);
 	List<Parkingplace> listarPlazasOcupadas();
 	Booking listarReservasById(int id);
 	Boolean actualizarReserva(Booking booking);
+	Client listarClientesById(Integer id);
+	Boolean actualizarCliente(Client client);
 }

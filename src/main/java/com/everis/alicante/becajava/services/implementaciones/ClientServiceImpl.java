@@ -27,7 +27,7 @@ public class ClientServiceImpl implements ClientService {
 	@Override
 	public void updateCliente(Client client) {
 		
-		clientDao.update(client);
+		this.clientDao.update(client);
 
 	}
 
@@ -55,6 +55,12 @@ public class ClientServiceImpl implements ClientService {
 	public double getImporteByClient(Client client) {
 	
 		return this.clientDao.findImporteByClient(client);
+	}
+
+	@Override
+	public Client findClientById(int id) {
+		
+		return this.clientDao.readById(id);
 	}
 
 	

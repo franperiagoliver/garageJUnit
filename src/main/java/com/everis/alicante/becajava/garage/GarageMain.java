@@ -80,7 +80,7 @@ public class GarageMain {
 					break;
 				case 6:	
 					validarFechasEntrada();
-					controlador.listarReservasByFecha();		
+//					controlador.listarReservasByFecha();		
 					break;	
 				case 7:					
 					Client client=insertClientName();					

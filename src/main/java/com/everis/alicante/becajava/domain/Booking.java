@@ -11,7 +11,9 @@ import java.util.Date;
  */
 @Entity
 @Table(name="booking")
-@NamedQuery(name="Booking.findAll", query="SELECT b FROM Booking b")
+@NamedQueries({
+@NamedQuery(name="Booking.findAll", query="SELECT b FROM Booking b"),
+@NamedQuery(name="Booking.findByDate", query="SELECT b FROM Booking b where b.bookingdate between :fechaInicio and :fechaFin")})
 public class Booking implements Serializable {
 	private static final long serialVersionUID = 1L;
 

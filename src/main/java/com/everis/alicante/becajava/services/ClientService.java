@@ -17,6 +17,6 @@ public interface ClientService {
 	
 	double getImporteByClient(Client client);
 	
-	
+	Client findClientById(int id);
 	
 }
